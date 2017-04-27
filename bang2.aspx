@@ -312,7 +312,7 @@
 						<img src="Images/logo.png" alt="" />
 					</div>
 				<div class="desc span_3_of_2">
-					<h2>BẢNG PURCHASE-ITEM</h2>
+					<h2 color="#000">BẢNG PURCHASE-ITEM</h2>
 		            <p>
 
                         <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSource1" GridLines="Horizontal" Height="150px" Width="100%">
