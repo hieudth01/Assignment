@@ -315,8 +315,11 @@
 					<h2>BẢNG PRODUCT</h2>
 		            <p>
                         
-                        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="id" DataSourceID="SqlDataSource1" Height="150px" Width="100%" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
-                            <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="id" DataSourceID="SqlDataSource1" Height="150px" Width="100%" CellPadding="4" GridLines="None" ForeColor="#333333">
+                            <AlternatingRowStyle BackColor="White" />
+                            <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+                            <EditRowStyle BackColor="#7C6F57" />
+                            <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
                             <Fields>
                                 <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
                                 <asp:BoundField DataField="product_category_id" HeaderText="product_category_id" SortExpression="product_category_id" />
@@ -327,10 +330,10 @@
                                 <asp:BoundField DataField="img" HeaderText="img" SortExpression="img" />
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
                             </Fields>
-                            <FooterStyle BackColor="White" ForeColor="#333333" />
-                            <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="White" ForeColor="#333333" />
+                            <FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />
+                            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#E3EAEB" />
                         </asp:DetailsView>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [product] WHERE [id] = @id" InsertCommand="INSERT INTO [product] ([id], [product_category_id], [sku], [name], [price], [description], [img]) VALUES (@id, @product_category_id, @sku, @name, @price, @description, @img)" SelectCommand="SELECT [id], [product_category_id], [sku], [name], [price], [description], [img] FROM [product]" UpdateCommand="UPDATE [product] SET [product_category_id] = @product_category_id, [sku] = @sku, [name] = @name, [price] = @price, [description] = @description, [img] = @img WHERE [id] = @id">
                             <DeleteParameters>
